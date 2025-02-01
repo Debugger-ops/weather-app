@@ -1,0 +1,239 @@
+.aqi-header {
+  margin-bottom: 1.5rem;
+}
+
+.aqi-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+.aqi-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aqi-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.aqi-level-container,
+.aqi-index-container {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.aqi-level {
+  padding: 0.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.aqi-index-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.aqi-meter-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.aqi-meter {
+  margin-left: 12px;
+  height: 1rem;
+
+  max-width: 96%;
+  border-radius: 9999px;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    green 5%,
+    #4caf50 15%,
+    #ffeb3b 30%,
+    #ff9800 50%,
+    #f44336 65%,
+    #b02787 85%,
+    rgb(69, 1, 69)
+  );
+  width: 100%; /* Ensure meter spans full width */
+}
+
+.aqi-pointer {
+  position: absolute;
+  width: 0.75rem;
+  height: 1.5rem;
+  background-color: black;
+  border: 2px solid #1a1a1a;
+  border-radius: 9999px;
+  top: -0.25rem;
+  transform: translateX(-15%);
+  transition: left 0.3s ease;
+}
+
+.aqi-scale {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.875rem;
+  padding: 0 0.25rem;
+}
+
+.aqi-scale span {
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.aqi-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.aqi-item {
+  margin: 12px;
+  background-color: #f8f8f8;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  flex: 1 1 200px; /* Allow items to shrink or grow */
+  max-width: 300px;
+}
+
+.aqi-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aqi-item-label {
+  font-weight: 500;
+  color: #444;
+}
+
+.aqi-item-value {
+  color: #444;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .aqi-header h2 {
+    font-size: 1.1rem; /* Slightly smaller font size for tablets */
+  }
+
+  .aqi-index-value {
+    font-size: 1.25rem; /* Adjust AQI index font size */
+  }
+
+  .aqi-item {
+    max-width: 45%; /* Allow items to take up more space */
+  }
+
+  .aqi-meter-container {
+    max-width: 100%; /* Allow the meter container to take full width */
+    margin: 0 auto;  /* Center the meter container */
+  }
+  
+}
+
+@media (max-width: 640px) {
+  .aqi-status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aqi-header h2 {
+    font-size: 1.1rem; /* Reduce font size for small screens */
+  }
+
+  .aqi-index-value {
+    font-size: 1.25rem; /* Adjust AQI value font size */
+  }
+
+  .aqi-scale {
+    font-size: 0.75rem; /* Make AQI scale text smaller */
+  }
+
+  .aqi-details {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .aqi-item {
+    max-width: 100%; /* Take up full width on small screens */
+    margin-bottom: 1rem; /* Add space between items */
+  }
+
+  .aqi-meter {
+    height: 1rem; /* Make the meter a bit taller on small screens */
+    width: 100%; /* Ensure the meter takes up the full width of its container */
+  }
+
+  .aqi-pointer {
+    height: 1.25rem; /* Reduce pointer height */
+  }
+
+  .aqi-item-content {
+    flex-direction: column; /* Stack content vertically in AQI items */
+    align-items: flex-start;
+  }
+
+  .aqi-item-label {
+    font-size: 0.875rem; /* Adjust label font size */
+  }
+
+  .aqi-item-value {
+    font-size: 1rem; /* Adjust value font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .aqi-header h2 {
+    font-size: 1rem; /* Even smaller font size for very small screens */
+  }
+
+  .aqi-index-value {
+    font-size: 1.125rem; /* Further adjust AQI index font size */
+  }
+
+  .aqi-scale {
+    font-size: 0.75rem; /* Make scale text smaller */
+  }
+
+  .aqi-item {
+    padding: 0.5rem; /* Adjust padding for small screens */
+  }
+
+  .aqi-item-label {
+    font-size: 0.75rem; /* Adjust label font size */
+  }
+
+  .aqi-item-value {
+    font-size: 0.875rem; /* Adjust value font size */
+  }
+
+  .aqi-item-content {
+    align-items: flex-start;
+  }
+
+  .aqi-meter {
+    height: 1rem; /* Maintain the height */
+    width: 100%; /* Ensure meter spans full width */
+  }
+
+  .aqi-meter-container {
+    width: 100%; /* Full width for very small screens */
+    padding: 0 10px; /* Adjust padding slightly */
+  }
+}

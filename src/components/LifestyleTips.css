@@ -1,0 +1,95 @@
+.lifestyle-tips {
+    margin-top: 34px;
+    margin-bottom: 34px;
+    background: black;
+    border-radius: 12px;
+    padding: 20px;
+    opacity: 0.8;
+  }
+  
+  .lifestyle-tips-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .lifestyle-tips-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+  }
+  
+  .tips-count {
+    background: #f7fafc;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .tip-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    background: black;
+    color: white;
+    opacity: 0.8;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .tip-item:hover {
+    transform: translateX(4px);
+  
+  }
+  
+  .tip-icon {
+    font-size: 1.25rem;
+    margin-right: 12px;
+    padding: 4px;
+  }
+  
+  .tip-text {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-top: 2px;
+  }
+  
+  .lifestyle-tips-error {
+    text-align: center;
+    padding: 20px;
+    color: #e53e3e;
+    background: #fff5f5;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 640px) {
+    .lifestyle-tips {
+      padding: 16px;
+    }
+  
+    .lifestyle-tips-header h3 {
+      font-size: 1.1rem;
+    }
+  
+    .tip-item {
+      padding: 10px;
+    }
+  
+    .tip-text {
+      font-size: 0.9rem;
+    }
+  }

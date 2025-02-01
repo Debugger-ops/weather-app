@@ -1,0 +1,49 @@
+/* Centering the entire search-bar and svg using flexbox */
+
+  
+  .weather {
+    width: 400px; /* Adjust size for better placement */
+    height: 200px; /* Adjust size for better placement */
+    margin-bottom: 20px; /* Spacing below the SVG */
+  }
+  
+  .weather circle {
+    fill: rgb(241, 222, 2); /* Sun circle color */
+  }
+  
+  .weather .sun-glow {
+    fill: rgb(244, 109, 6); /* Sun glow color */
+  }
+  
+  .weather path {
+    stroke-width: 3;
+    fill: none; /* Remove fill for paths */
+    stroke: #60a5fa; /* Stroke color */
+  }
+  
+  .weather text {
+    fill: #1e40af; /* Text color for "WeatherNow" */
+  }
+  
+  /* Styling the input field */
+  .search-bar input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 2px solid #60a5fa;
+    border-radius: 5px;
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    background-color: #60a5fa;
+    color: white;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background-color: #3b82f6;
+  }
+  

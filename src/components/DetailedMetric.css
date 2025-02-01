@@ -1,0 +1,89 @@
+.metrics-grid {
+    display: flex;
+    flex-direction: column; /* Stack items in a column */
+    gap: 16px; /* Space between grid items */
+}
+
+.row1, .row2 {
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: flex-start;
+}
+
+.row2 {
+    padding-bottom: 18px;
+}
+
+.metric-item {
+    
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add padding for .feellike */
+.feellike {
+    padding: 1px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    /* Adjust layout for tablets and medium screens */
+    .row1, .row2 {
+        margin-left: 20px;  /* Reduce left margin for smaller screens */
+        gap: 40px;  /* Reduce gap between items */
+    }
+
+    .metrics-grid {
+        gap: 12px; /* Reduce space between rows */
+    }
+}
+
+@media (max-width: 768px) {
+    /* For screens smaller than 768px, such as tablets and small laptops */
+    .metrics-grid {
+        flex-direction: column; /* Stack rows vertically */
+        gap: 12px; /* Adjust gap */
+    }
+
+    .row1, .row2 {
+        margin-left: 0; /* Remove margin */
+        flex-direction: column; /* Stack rows vertically */
+        gap: 20px; /* Increase gap between stacked items */
+    }
+
+    .metric-item {
+        width: 100%; /* Ensure metric items take full width */
+        margin: 8px 0; /* Add vertical margin */
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small screens (mobile devices) */
+    .metrics-grid {
+        gap: 8px; /* Reduce gap */
+    }
+
+    .row1, .row2 {
+        flex-direction: column; /* Stack rows vertically on small screens */
+        gap: 15px; /* Adjust gap for stacking */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .metric-item {
+        width: 100%; /* Ensure items take full width */
+        margin: 6px 0; /* Vertical margin for better spacing */
+        padding: 12px; /* Reduce padding */
+    }
+
+    .feellike {
+        padding: 0; /* Adjust padding for small screens */
+    }
+}

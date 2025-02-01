@@ -1,0 +1,195 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  height: 100vh;
+  padding: 26px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  flex-direction: column; /* Make the content stack vertically on small screens */
+}
+
+.search-bar input {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-right: 10px;
+  width: 100%; /* Make input take full width on smaller screens */
+  max-width: 300px; /* Limit max width for large screens */
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Make button full-width on smaller screens */
+  max-width: 120px; /* Limit max width on larger screens */
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+.weather-card, .aqi-card, .card-detailed-metrics, .card-lifestyle-tips{
+  margin-top: 40px;
+  padding-top: 10px;
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.weather-info, .aqi_index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #666;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: #666;
+}
+
+.forecast {
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.forecast h3 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.forecast-list {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.forecast-item {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+.forecast-item .date {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.forecast-item .temp {
+  margin-top: 5px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  background-color: #f8d7da;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+
+  .weather-card, .aqi-card, .card-detailed-metrics, .card-lifestyle-tips, .forecast {
+    width: 100%;
+    margin-top: 20px;
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+
+  .forecast-list {
+    flex-direction: column; /* Stack the forecast items on small screens */
+  }
+
+  .forecast-item {
+    min-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .details {
+    flex-direction: column; /* Stack details vertically on small screens */
+  }
+
+  .temperature {
+    font-size: 32px; /* Smaller font size for temperature */
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .temperature {
+    font-size: 28px; /* Even smaller font size for very small screens */
+  }
+
+  .search-bar input,
+  .search-bar button {
+    font-size: 14px; /* Adjust input and button font size for small screens */
+    padding: 8px;
+  }
+
+  .weather-card, .aqi-card, .card-detailed-metrics, .card-lifestyle-tips, .forecast {
+    width: 100%;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .forecast-item {
+    font-size: 12px; /* Smaller text size for forecast items */
+  }
+}

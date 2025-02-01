@@ -1,0 +1,77 @@
+/* Default styles */
+.weather-dashboard {
+    font-family: Arial, sans-serif;
+    min-height: 100vh; 
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+    overflow: scroll;
+    color: white; 
+  }
+
+
+  
+  /* Backgrounds for different weather conditions */
+  .clear {
+    background-image: url('https://c1.wallpaperflare.com/preview/232/993/172/sky-blue-nature-weather.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .rain {
+    background-image: url('https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg?t=st=1738073937~exp=1738077537~hmac=093c6e12dfce83893fe735156062ea5791b232060ca498c8cc60733b85ed1fd8&w=900');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .snow {
+    background-image: url('https://img.freepik.com/free-photo/beautiful-fir-woods-field-winter_23-2147742013.jpg?t=st=1738073867~exp=1738077467~hmac=68f487a38c5cc2d69d26e45765bb0f887350de19299ae06155e986c2deec135e&w=360');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .clouds {
+    background-image: url('https://img.freepik.com/free-photo/mesmerizing-view-fresh-green-fields-cloudy-sky_181624-49447.jpg?t=st=1738073814~exp=1738077414~hmac=77d7440f7ef48c1878f9d47ddd1a697c74f81c982358031c829b386f0684197f&w=900');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .haze {
+    background-image: url('https://img.freepik.com/free-photo/winter-city-background_23-2147722440.jpg?t=st=1738087480~exp=1738091080~hmac=aab153bbc684c4a413eccee367144bdde2951dbbc85a4e3ec70ff879d74ba0f1&w=740');
+    background-size: cover;
+   
+    background-position: center;
+  }
+
+
+  .sunny {
+    background-image: url('https://img.freepik.com/premium-photo/field-green-grass-illuminated-by-bright-sunbeams_522472-4762.jpg?w=360');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mist {
+    background-image: url('https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg?t=st=1738418439~exp=1738422039~hmac=71512af42befdfee90c4ca8e3388644cbab3d494e304b88d59c3a8b0343f29b9&w=996');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fog {
+    background-image: url('https://img.freepik.com/free-vector/abstract-gray-cloudy-watercolor-texture-background_1035-26662.jpg?t=st=1738419397~exp=1738422997~hmac=6438da2003109fe4f2b75ba0921792d3c821a4a75bc9b97dd2410ec2e95a7f15&w=996');
+    background-size: cover;
+    background-position: center;
+  }
+  .thunderstorm {
+    background-image: url('https://img.freepik.com/free-photo/lightning-strike-cloudy-sky-night-time_395237-28.jpg?t=st=1738419589~exp=1738423189~hmac=13228fa824189104748ecef8461cb4bdf1545fee4030adadec2728a22487d5c7&w=1380');
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  
+  /* Content styling */
+  .weather-dashboard .content {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: to make text readable */
+  }
+  
